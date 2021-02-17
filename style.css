@@ -153,7 +153,7 @@
     position: absolute;
     top: -10px;
     left: 10%;
-    background: blue;
+    background: #f5f5f5;
     width: 60px;
     height: 20px;
 }
@@ -161,7 +161,7 @@
     position: absolute;
     bottom: -10px;
     right: 20%;
-    background: blue;
+    background: #f5f5f5;
     width: 60px;
     height: 20px;
 }
@@ -202,7 +202,9 @@
 
 .ex-13-button:hover .ex-13-top-white{
   animation-name: ruotatop;
-  animation-duration: 3s
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes ruotatop {
@@ -217,14 +219,44 @@
     left: calc(100% - 40px);
     top:100%;
   }
-
   60% {
     left: -10px;
     top:100%;
   }
-
   80% {
     left: -10px;
     top: -10px;
+  }
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+  animation-name: ruotabottom;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ruotabottom {
+  0% {
+    right: 20%;
+    bottom: -10px;
+  }
+  30%{
+    right: 80%;
+    bottom: -10px
+  }
+   45% {
+    right: 80%;
+    bottom: 95%;
+  }
+
+  60% {
+    right: -10px;
+    bottom: 95%;
+  }
+
+  80% {
+    right: -10px;
+    bottom: -10px
   }
 }
