@@ -16,7 +16,7 @@
   transition: width 3s;
 }
 
-.ex-2-square:oncli{
+.ex-2-square:active{
   width: 100%;
 }
 
@@ -38,7 +38,7 @@
   transition: opacity 5s;
 }
 
-.ex-4-square{
+.ex-4-square:hover{
   opacity: 0;
 }
 
@@ -96,11 +96,46 @@
 }
 
 .ex-10-icon {
-    font-size: 60px;
+  font-size: 60px;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 .ex-11-icon {
-    font-size: 60px;
+  font-size: 60px;
 }
+
+.ex-11-icon:hover{
+  animation-name: spin2;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  95%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -118,7 +153,7 @@
     position: absolute;
     top: -10px;
     left: 10%;
-    background: #f5f5f5;
+    background: blue;
     width: 60px;
     height: 20px;
 }
@@ -126,7 +161,70 @@
     position: absolute;
     bottom: -10px;
     right: 20%;
-    background: #f5f5f5;
+    background: blue;
     width: 60px;
     height: 20px;
+}
+
+.ex-12-button:hover .ex-12-top-white{
+  animation-name: spostatop;
+  animation-duration: 1s
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+  animation-name: spostabottom;
+  animation-duration: 1s
+}
+
+@keyframes spostatop {
+  0% {
+    left: 10%;
+  }
+  50%{
+    left: calc(100% - 60px);
+  }
+  100%{
+    left: 10%;
+  }
+}
+
+@keyframes spostabottom {
+  0% {
+    right: 20%;
+  }
+  50%{
+    right: calc(100% - 60px);
+  }
+  100%{
+    right: 20%;
+  }
+}
+
+.ex-13-button:hover .ex-13-top-white{
+  animation-name: ruotatop;
+  animation-duration: 3s
+}
+
+@keyframes ruotatop {
+  0% {
+    left: 10%;
+  }
+  30%{
+    left: calc(100% - 40px);
+    top: -10px
+  }
+  45% {
+    left: calc(100% - 40px);
+    top:100%;
+  }
+
+  60% {
+    left: -10px;
+    top:100%;
+  }
+
+  80% {
+    left: -10px;
+    top: -10px;
+  }
 }
