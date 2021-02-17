@@ -215,15 +215,15 @@
     left: calc(100% - 40px);
     top: -10px
   }
-  45% {
+  55% {
     left: calc(100% - 40px);
     top:100%;
   }
-  60% {
+  80% {
     left: -10px;
     top:100%;
   }
-  80% {
+  95% {
     left: -10px;
     top: -10px;
   }
@@ -245,17 +245,17 @@
     right: 80%;
     bottom: -10px
   }
-   45% {
+  55% {
     right: 80%;
     bottom: 95%;
   }
 
-  60% {
+  80% {
     right: -10px;
     bottom: 95%;
   }
 
-  80% {
+  95% {
     right: -10px;
     bottom: -10px
   }
